@@ -1,14 +1,14 @@
-import HockeyTeamList from '../components/hockeyTeamList';
-import teams from '../components/teams.json';
+import Recipes from '../components/Receipes/Recipes';
+import recipes from '../components/Receipes/recipes.json';
 
 export default function Home() {
   return (
     <div>
-      <HockeyTeamList teams={teams} />
+      <Recipes recipes={recipes} />
     </div>
   );
 }
 
 Home.getLayout = function getLayout(page) {
-  return <div className="p-4">{page}</div>;
+  return <div>{page}</div>;
 };
