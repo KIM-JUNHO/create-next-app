@@ -1,5 +1,12 @@
+import HockeyTeamList from '../components/hockeyTeamList';
+import teams from '../components/teams.json';
+
 export default function Home() {
-  return <div className="bg-red-400">Hello World</div>;
+  return (
+    <div>
+      <HockeyTeamList teams={teams} />
+    </div>
+  );
 }
 
 Home.getLayout = function getLayout(page) {
