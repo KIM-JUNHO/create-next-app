@@ -1,12 +1,5 @@
-import Recipes from '../components/Receipes/Recipes';
-import recipes from '../components/Receipes/recipes.json';
-
 export default function Home() {
-  return (
-    <div>
-      <Recipes recipes={recipes} />
-    </div>
-  );
+  return <div>Hello World</div>;
 }
 
 Home.getLayout = function getLayout(page) {
