@@ -1,24 +1,22 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+  mode: 'jit',
+  purge: ['./pages/**/*.js', './components/**/*.js'],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
-      colors: {
-        brand: {
-          light: '#3fbaeb',
-          DEFAULT: '#0fa9e6',
-          dark: '#0c87b8',
-        },
-      },
       fontFamily: {
-        headline: 'Poppins, sans-serif',
+        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
     },
   },
   variants: {
-    extend: {
-      backgroundColor: ['active'],
-    },
+    extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/aspect-ratio'),
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
+  ],
 };
